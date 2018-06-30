@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="EconduceDevLab.Views.MapFeaturesPage"
+    BackgroundColor="#00A1C6">
+    <ContentPage.Content>
+        <Label
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            TextColor="White"
+            FontAttributes="Bold"
+            FontSize="Large"
+            Text="¡Bienvenido a #HackTheJob!"/>
+    </ContentPage.Content>
+</ContentPage>
