@@ -12,7 +12,8 @@ namespace EconduceDevLab
         {
             InitializeComponent();
 
-            MainPage = new MapFeaturesPage();
+            var content = new MapFeaturesPage();
+            MainPage = new NavigationPage(content);
         }
 
         protected override void OnStart()

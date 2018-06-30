@@ -2,15 +2,21 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="EconduceDevLab.Views.MapFeaturesPage"
-    BackgroundColor="#00A1C6">
-    <ContentPage.Content>
-        <Label
-            VerticalOptions="Center"
-            HorizontalOptions="Center"
-            TextColor="White"
-            FontAttributes="Bold"
-            FontSize="Large"
-            Text="¡Bienvenido a #HackTheJob!"/>
-    </ContentPage.Content>
+    x:Class="EconduceDevLab.Views.MapFeaturesPage">
+    <StackLayout
+        Spacing="0">
+        <Button Text="Obtener map features" Command="{Binding GetMapFeaturesCommand}"/>
+        <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}"/>
+        <ListView x:Name="MapFeaturesList"
+                  ItemsSource="{Binding MapFeatures}"
+                  CachingStrategy="RecycleElement">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell
+                        Text="{Binding Properties.Name}"
+                        Detail="{Binding Type}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            </ListView>
+    </StackLayout>
 </ContentPage>
